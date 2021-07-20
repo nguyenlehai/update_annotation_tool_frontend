@@ -1,0 +1,35 @@
+.ant-select-tree-checkbox.ant-select-tree-checkbox-disabled {
+  display: none;
+}
+
+.ant-layout-content {
+  padding: 2%;
+}
+
+.ant-table-cell {
+  text-align: center !important;
+}
+
+.ant-layout-content {
+  background-color: white;
+}
+
+.ant-upload-list-text-container {
+  width: 38%
+}
+
+li.ant-select-tree-treenode-disabled > span:not(.ant-select-tree-switcher),
+li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper,
+li.ant-select-tree-treenode-disabled > .ant-select-tree-node-content-wrapper span {
+  cursor: default;
+}
+
+li.ant-select-tree-treenode-disabled.ant-select-tree-treenode-switcher-close {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 4px;
+}

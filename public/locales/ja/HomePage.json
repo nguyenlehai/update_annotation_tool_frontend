@@ -1,0 +1,15 @@
+{
+  "TitlePage": "Update Annotation Tool",
+  "Form": {
+    "IdName": "ID",
+    "BookName": "書籍名 (Book Name)",
+    "OldFilename": "旧ファイル名(Old filename) ",
+    "NewFilename": "新ファイル名 (new filename)",
+    "LawName": "法令名 (Law Name)",
+    "FileName": "ファイル名 (File Name)",
+    "ArticleID": "条数 (Article ID)",
+    "Paragraph": "QAの段落 (Paragraph)",
+    "DecreeInvisible": "法令の条文（見え消し）",
+    "Label": "ラベル (Label)"
+  }
+}
