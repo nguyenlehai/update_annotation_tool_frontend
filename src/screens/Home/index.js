@@ -33,6 +33,7 @@ const asyncLoadData = async () => {
 const Home = () => {
   const {t} = useTranslation(["HomePage"]);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   let arrBookNames = [];
   let countLabelInputed = 0;
   const csvData = [
@@ -123,6 +124,7 @@ const Home = () => {
           placeholder="Choose Label"
           optionFilterProp="Select.Option"
           value={data}
+          loading={loading ? loading : ""}
           onChange={(value) => changeLabel(record.id, value)}
         >
           <Select.Option value="0">0</Select.Option>
@@ -133,11 +135,16 @@ const Home = () => {
   ];
 
   async function changeLabel(id, value) {
-    await Axios.patch("http://localhost:5000/update", {
-      id,
-      "label": parseInt(value)
-    });
-    console.log(id, value, data);
+    setLoading(true);
+    try {
+      await Axios.patch("http://localhost:5000/update", {
+        id,
+        "label": parseInt(value)
+      });
+    } catch (e) {
+      console.error(e);
+    }
+    setLoading(false);
     setData(await asyncLoadData());
   }
 
